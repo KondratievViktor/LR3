@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        if (confirm('Доброго времени суток, у этой страницы есть к вам вопрос, вы готовы ответить?')) {
+            var name = prompt('Как вас Зовут?', 'Введите сюда ваше имя');
+            alert("Ваше имя - " + name)
+        }
+
+        if (confirm('Ещё один вопрос, вы готовы ответить?')) {
+            var age = prompt('Сколько вам лет?', 'Введите сюда ваш возрас');
+        }
+
+        if (confirm('Вы уверены, что вам ' + age)) {
+            alert("Ваш возраст - " + age)
+        }
+        else {
+            var age = prompt('Сколько вам лет?', 'Введите сюда ваш возрас');
+            alert("Ваш возраст - " + age)
+        }
+        alert("Спасибо что уделили время")
+
+        document.write("Добрый день, " + name)
+        document.write(", ваш возраст: " + age)
+    </script>
+
+
+    <h1 class="shadow-text">Лабораторная работа №3</h1>
+    <h2 class="title-example">Индивидуальное задание №1</h2>
+    <table border="1" style="border-collapse:collapse;">
+        <tr>
+            <th>Нахождение дискриминанта</th>
+            <th>Минимальное из двух чисел</th>
+            <th>Максимальное из двух чисел</th>
+            <th>Сравнение двух чисел</th>
+        </tr>
+        <td>
+            <p1>Ввод параметров квадратного уравнения</p1>
+            <div>
+                <label>
+                    Введите a:
+                    <input type="number" id="a1" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Введите b:
+                    <input type="number" id="b1" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Введите c:
+                    <input type="number" id="c1" />
+                </label>
+            </div>
+            <div>
+                <button onclick="CalcD()">Посчитать</button>
+            </div>
+            <div>
+                <label>
+                    Дискриминант:
+
+                    <output id="rezult"> </output>
+                </label>
+            </div>
+        </td>
+        <td>
+            <p1>Введите два числа</p1>
+            <div>
+                <label>
+                    Введите a:
+                    <input type="number" id="a2" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Введите b:
+                    <input type="number" id="b2" />
+                </label>
+            </div>
+            <div>
+                <button id="MIN" onclick="MinAB()">Посчитать</button>
+            </div>
+            <div>
+                <label>
+                    Минмальное число:
+
+                    <output id="rezult2"> </output>
+                </label>
+            </div>
+        </td>
+        <td>
+            <p1>Введите два числа</p1>
+            <div>
+                <label>
+                    Введите a:
+                    <input type="number" id="a3" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Введите b:
+                    <input type="number" id="b3" />
+
+                </label>
+            </div>
+            <div>
+                <button id="MAX" onclick="MaxAB()">Посчитать</button>
+            </div>
+            <div>
+                <label>
+                    Максимальное число:
+
+                    <p id="rezult3"> </p>
+                </label>
+            </div>
+        </td>
+        <td>
+            <p1>Введите два числа</p1>
+            <div>
+                <label>
+                    Введите a:
+                    <input type="number" id="a4" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Введите b:
+                    <input type="number" id="b4" />
+                </label>
+            </div>
+            <div>
+                <button id="EQL" onclick="EqualAB()">Посчитать</button>
+            </div>
+            <div>
+                <label>
+                    Равенство чисел:
+
+                    <output id="rezult4"> </output>
+                </label>
+            </div>
+        </td>
+    </table>
+
+    <h2>Индивидуальное задание №2</h2>
+
+    <div>
+        <label>
+            Переменная name =
+            <input id="name_id" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Переменная admin =
+            <output id="admin_id"></output>
+        </label>
+    </div>
+    <button id="CopyName" onclick="NameCopy()">Вывод</button>
+
+    <h2>Индивидуальное задание №3</h2>
+
+    <table border="1" style="border-collapse:collapse;">
+        <tr>
+            <th>Общая часть</th>
+            <th>Индивидуальная часть</th>
+        </tr>
+        <td>
+            <div>
+                <h1>Стилизация страницы</h1>
+            </div>
+            <div>
+                <h2>Конспект курса</h2>
+            </div>
+            <div>
+                <p class="learned-ok">Парные теги.</p>
+            </div>
+            <div>
+                <p class="learned-ok">Одиночные теги.</p>
+            </div>
+            <div>
+                <p class="learned-ok">Атрибуты тегов.</p>
+            </div>
+            <div>
+                <p class="learned-ok">Инлайновые (встроенные) стили.</p>
+            </div>
+            <div>
+                <p class="learning-in-progress">Внешние стили.</p>
+            </div>
+            <div>
+                <p class="not-learned">Стилизация по классам.</p>
+            </div>
+        </td>
+
+        <td>
+            <div>
+                <h1>Индивидуальная cтилизация страницы</h1>
+            </div>
+            <div>
+                <h2>Конспект курса</h2>
+            </div>
+            <div>
+                <p class="gain-center">Размер шрифта.</p>
+            </div>
+            <div>
+                <p class="shadow-text">Тень.</p>
+            </div>
+            <div>
+                <p class="learned-ok">Цвет текста.</p>
+            </div>
+            <div>
+                <p class="change_background">Цвет рамки.</p>
+            </div>
+            <div>
+                <p class="change-text">Изменение цвета при наведении.</p>
+            </div>
+            <div>
+                <p class="line-through">Зачёркнутый текст.</p>
+            </div>
+        </td>
+    </table>
+
+    <h2>Индивидуальное задание №4</h2>
+    <table>
+        <tr>
+            <th>
+                <img src="https://i.artfile.ru/4000x2659_644536_%5Bwww.ArtFile.ru%5D.jpg" height="250">
+            </th>
+            <th>
+                <label>
+                    <div>Иван Иванов</div>
+                    <div><input id="in" /></div>
+                    <div><button id="inButton" onclick="ChangeButton()">Замена</button></div>
+                    <div><p id="rez"> </p></div>
+                </label>
+            </th>
+        </tr>
+    </table>
+
+    <button onclick="changecollor()">
+        Изменение цвета фона
+    </button>
+    <button onclick="returncollor()">
+        Стандарный цвет
+    </button>
+
+    <h2>Анкета</h2>
+
+    <div>
+        <input id="FormName" /> <label>Имя</label>
+    </div>
+    <div>
+        <input id="FormSurname" /> <label>Фамилия</label>
+    </div>
+    <div>
+        <input id="FormAge" /> <label>Возраст</label>
+    </div>
+    <div id="resultat">Результат анкеты: </div>
+
+    <div>
+        Выберете ваши навыки: <br>
+        <input id="checkbox1" type="checkbox"><label>Есть навыки программирования</label><br>
+        <input id="checkbox2" type="checkbox"><label>Есть знания математики</label><br>
+        <input id="checkbox3" type="checkbox"><label>Есть навыки танцев</label><br>
+        <input id="checkbox4" type="checkbox"><label>Есть навыки пения</label><br>
+        <input id="checkbox5" type="checkbox"><label>Есть высшее образование</label><br>
+        <button onclick="check()">Результат анкеты</button>
+    </div>
+
+    <h2>Индивидуальное задание на повышенную оценку</h2>
+
+    <input id="num1" />
+
+    <div id="operator_btns">
+        <button id="plus" onclick="op='+'">+</button>
+        <button id="minus" onclick="op='-'">-</button>
+        <button id="times" onclick="op='*'">x</button>
+        <button id="divide" onclick="op='/'">:</button>
+    </div>
+
+    <input id="num2" />
+    <br>
+
+    <button onclick="func()">Посчитать</button>
+    <p id="resultCalc"></p>
+
+    <script>
+        // переменная, в которой хранится выбранное математическое действие
+        var op;
+
+        // функция расчёта
+        function func() {
+            // переменная для результата
+            var result;
+            // получаем первое и второе число
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            // смотрим, что было в переменной с действием, и действуем исходя из этого
+            switch (op) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+            }
+
+            // отправляем результат на страницу
+            if (result > 15) {
+                document.getElementById("resultCalc").innerHTML = 'Число>15';
+                document.getElementById("resultCalc").style.backgroundColor = "red"
+            }
+            else
+                document.getElementById("resultCalc").innerHTML = result;
+        }
+    </script>
+
+    <script>
+        function NameCopy() {
+            var name_id = String(document.getElementById("name_id").value);
+
+            var admin_id = name_id;
+
+            document.getElementById("admin_id").innerHTML = admin_id;
+        }
+
+    </script>
+
+    <script>
+        function check() {
+            if (document.getElementById("checkbox1").checked && document.getElementById("checkbox2").checked && document.getElementById("checkbox5").checked) {
+                document.getElementById("resultat").innerText = "Результат анкеты: положительный";
+            }
+            else {
+                document.getElementById("resultat").innerText = "Результат анкеты: отрицательный";
+            }
+
+
+            if (document.getElementById("FormAge").value <= 0)
+                alert("Возвраст не может быть отрицательным числом!")
+            else if (!confirm("Вы уверены, что вам " + a)) {
+                var b = prompt("Введите свой возвраст снова!");
+            }
+        }
+
+        function redcollor() {
+            document.getElementById("result").backgroundColor =
+                'rgb(' + 255 +
+                ',' + 0 +
+                ',' + 0 + ')';
+        }
+
+        function returncollor() {
+            document.body.style.backgroundColor =
+                'rgb(' + 255 +
+                ',' + 255 +
+                ',' + 255 + ')';
+        }
+
+        function changecollor() {
+            document.body.style.backgroundColor =
+                'rgb(' + Math.round(Math.random() * 255) +
+                ',' + Math.round(Math.random() * 255) +
+                ',' + Math.round(Math.random() * 255) + ')';
+        }
+
+        function CalcD() {
+            var a = Number(document.getElementById("a1").value);
+            var b = Number(document.getElementById("b1").value);
+            var c = Number(document.getElementById("c1").value);
+
+            result = b * b - 4 * a * c;
+            document.getElementById("rezult").innerHTML = result;
+        }
+
+        function MinAB(a, b) {
+            var a = Number(document.getElementById("a2").value);
+            var b = Number(document.getElementById("b2").value);
+
+            result = Math.min(a, b);
+            document.getElementById("rezult2").innerHTML = result;
+        }
+
+        function MaxAB(a, b) {
+            var a = Number(document.getElementById("a3").value);
+            var b = Number(document.getElementById("b3").value);
+
+            result = Math.max(a, b);
+            document.getElementById("rezult3").innerHTML = result;
+        }
+
+        function EqualAB(a, b) {
+            var a = Number(document.getElementById("a4").value);
+            var b = Number(document.getElementById("b4").value);
+
+            if (a == b)
+                result = 'Числа равны'
+            else
+                result = 'Числа не равны'
+
+            document.getElementById("rezult4").innerHTML = result;
+        }
+        function ChangeButton() {
+            var inname = String(document.getElementById("in").value);
+
+            result = ("Иван " + inname)
+
+            document.getElementById("rez").innerHTML = result;
+        }
+    </script>
+
+</body>
+<style>
+    body {
+        font-family: Tahoma, serif;
+    }
+
+    h1 {
+        color: #999999;
+    }
+
+    .redbackground {
+        color: red;
+    }
+
+    .learned-ok {
+        color: green;
+    }
+
+    .learning-in-progress {
+        color: orange;
+    }
+
+    .not-learned {
+        color: red;
+    }
+
+    .gain-center {
+        transition: 1s; /* Время эффекта */
+    }
+
+        .gain-center:hover {
+            font-size: 2em; /* Увеличиваем масштаб */
+        }
+
+    .shadow-text {
+        color: black; /* Цвет  текста */
+        padding: 0px 0px;
+        line-height: 1;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+        .shadow-text:hover {
+            color: darkblue; /* Меняем цвет текста */
+            -webkit-text-shadow: 2px 2px 2px #000;
+            -moz-text-shadow: 2px 2px 2px #000;
+            text-shadow: 2px 2px 2px #000;
+        }
+
+    .change_background {
+        color: black; /* Цвет текста */
+        background: white; /* Цвет фона */
+        padding: 0px; /* Поля вокруг текста */
+        transition: 1s linear; /* Время изменения */
+    }
+
+        .change_background:hover {
+            color: black; /* Цвет текста */
+            background: red; /* Цвет фона */
+            margin: 10px
+        }
+
+    .change-text {
+        color: black; /* Цвет текста */
+        padding: 0px 0px;
+        line-height: 1;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+        .change-text:hover {
+            color: darkblue; /* Меняем цвет текста */
+        }
+
+    .line-through {
+        color: black; /* Цвет текста */
+        font-size: 1em;
+        text-decoration: none;
+    }
+
+        .line-through:hover {
+            text-decoration: line-through; /* Добавляем зачеркивание */
+        }
+</style>
+</html>
